@@ -10,7 +10,7 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
 * [API](https://github.com/easyac/crawler#api)
     * [login](https://github.com/easyac/crawler#senacapiloginuser-pass-unidade)
     * [isLoggedIn](https://github.com/easyac/crawler#senacapiisloggedincookie)
-    * [getCodigoAluno](#)
+    * [getCodigoAluno](https://github.com/easyac/crawler#getcodigoalunocookie)
     * [getParamsSituacaoCurricular](https://github.com/easyac/crawler#getparamssituacaocurricularcookie-codaluno)
     * [getSituacaoCurricular](https://github.com/easyac/crawler#getsituacaocurricularcookie-codaluno-codturma)
     * [getTitulos](#)
@@ -104,7 +104,7 @@ Navega até a página de situação curricular e retorna os dados necessários p
 Parâmetros: 
 
 * `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
-* `codAluno`: Código do Aluno
+* `codAluno`: Valor retornado em [getCodigoAluno](https://github.com/easyac/crawler#getcodigoalunocookie)
 
 
 ### getSituacaoCurricular(cookie, codAluno, codTurma)
@@ -114,8 +114,38 @@ Retorna o histórico de disciplinas. É possível visualizar as disciplinas apro
 Parâmetros: 
 
 * `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
-* `codAluno`: Valor retornado em [getCodigoAluno]()
-* `codTurma`: Valor retornado em [getParamsSituacaoCurricular]
+* `codAluno`: Valor retornado em [getCodigoAluno](https://github.com/easyac/crawler#getcodigoalunocookie)
+* `codTurma`: Valor retornado em [getParamsSituacaoCurricular](https://github.com/easyac/crawler#getparamssituacaocurricularcookie-codaluno)
+
+### getTitulos(cookie)
+
+Retorna todos os dados financeiros do Aluno. Quais títulos já foram pagos, seus valores e quais ainda não foram pagos.
+
+Parâmetros: 
+
+* `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+
+
+### getParamsFrequencia(cookie, codigoAluno)
+
+Retorna os parâmetros necessários para efetuar a requisição [getFrequencia]().
+ 
+Parâmetros: 
+
+* `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+* `codAluno`: Valor retornado em [getCodigoAluno](https://github.com/easyac/crawler#getcodigoalunocookie)
+
+
+### getFrequencia(cookie, codigoAluno, codigoTurma)
+
+Retorna os dados de frequência do aluno.
+
+Parâmetros: 
+
+* `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+* `codAluno`: Valor retornado em [getCodigoAluno](https://github.com/easyac/crawler#getcodigoalunocookie)
+* `codTurma`: Valor retornado em [getParamsSituacaoCurricular](https://github.com/easyac/crawler#getparamssituacaocurricularcookie-codaluno)
+
 
 
 
