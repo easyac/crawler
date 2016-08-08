@@ -9,13 +9,13 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
 * [Exemplos](https://github.com/easyac/crawler#exemplos)
 * [API](https://github.com/easyac/crawler#api)
     * [login](https://github.com/easyac/crawler#senacapiloginuser-pass-unidade)
-    * [isLoggedIn](https://github.com/easyac/crawler#senacapiisloggedincookie)
+    * [isLoggedIn](https://github.com/easyac/crawler#isloggedincookie)
     * [getCodigoAluno](https://github.com/easyac/crawler#getcodigoalunocookie)
     * [getParamsSituacaoCurricular](https://github.com/easyac/crawler#getparamssituacaocurricularcookie-codaluno)
     * [getSituacaoCurricular](https://github.com/easyac/crawler#getsituacaocurricularcookie-codaluno-codturma)
-    * [getTitulos](#)
-    * [getParamsFrequencia](#)
-    * [getFrequencia](#)
+    * [getTitulos](https://github.com/easyac/crawler#gettituloscookie)
+    * [getParamsFrequencia](https://github.com/easyac/crawler#getparamsfrequenciacookie-codigoaluno)
+    * [getFrequencia](https://github.com/easyac/crawler#getfrequenciacookie-codigoaluno-codigoturma)
 * [FAQ](https://github.com/easyac/crawler#faq)    
 
     
@@ -99,7 +99,7 @@ Parâmetros:
 
 ### getParamsSituacaoCurricular(cookie, codAluno)
 
-Navega até a página de situação curricular e retorna os dados necessários para o método [getSituacaoCurricular](#getSituacaoCurricular).
+Navega até a página de situação curricular e retorna os dados necessários para o método [getSituacaoCurricular](https://github.com/easyac/crawler#getsituacaocurricularcookie-codaluno-codturma).
 
 Parâmetros: 
 
@@ -128,7 +128,7 @@ Parâmetros:
 
 ### getParamsFrequencia(cookie, codigoAluno)
 
-Retorna os parâmetros necessários para efetuar a requisição [getFrequencia]().
+Retorna os parâmetros necessários para efetuar a requisição [getFrequencia](https://github.com/easyac/crawler#getfrequenciacookie-codigoaluno-codigoturma).
  
 Parâmetros: 
 
