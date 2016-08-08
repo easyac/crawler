@@ -8,11 +8,8 @@ WORKDIR /app
 
 COPY . ./
 
-RUN npm install
-RUN chmod +x ./entrypoint.sh
-
-ENV PASSWORD ${PASSWORD}
+RUN npm install && chmod +x ./entrypoint.sh
 
 ENTRYPOINT ["./entrypoint.sh"]
 
-CMD DEBUG=nightmare node index.js ${PASSWORD}
+CMD DEBUG=nightmare node index.js
