@@ -1,44 +1,22 @@
-# Easyac/crawlers
+# Crawler Easyac
 
-Crawlers usados para buscar dados do portal do aluno.
+Nesse repositório estão os crawlers usados para buscar dados do portal do aluno.
 
 Dentro de suas funcionalidades estão **Login** e **Consultar Frequencia**, por exemplo.
 
 Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segmentio/nightmare) como navegação inicial e [Cheerio](https://github.com/cheeriojs/cheerio) para as demais requisições.
 
-* Exemplos
-* API
-    * login
-    * isLoggedIn
+* [Exemplos](https://github.com/easyac/crawler#exemplos)
+* [API](https://github.com/easyac/crawler#api)
+    * [login](https://github.com/easyac/crawler#senacapiloginuser-pass-unidade)
+    * [isLoggedIn](https://github.com/easyac/crawler#senacapiisloggedincookie)
     * getSituacaoCurricular
     * getTitulos
     * getParamsFrequencia
     * getFrequencia
+* [FAQ](https://github.com/easyac/crawler#faq)    
+
     
-    
-
-
-## API
-
-### senacApi.login(user, pass, unidade)
-
-Chamada de login ao portal do aluno. A api cria uma nova "janela" com o Nightmare, navega até o formulário de login do portal e preenche as credenciais. 
-
-Caso o login seja efetuado com sucesso, será retornado o cookie contendo o valor da sessão. Se o login for negado, retornada um erro.
-
-Parâmetros:
-* `user`: Usuário usado para acessar o portal
-* `pass`: Senha do usuário
-* `unidade`: Unidade do usuário 
-
-### senacApi.isLoggedIn(cookie)
-
-Verifica se a sessão ainda está ativa para o cookie passado. 
-
-Parâmetros:
-* `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
-
-
 ## Exemplos
  
 Para efetuar o login, basta fazer a chamada ao login passando o usuário, senha e unidade. Caso o login seja efetuado com sucesso, será retornado o cookie contento o valor de sua sessão. É a partir dele que as próximas requisições serão feitas.
@@ -83,6 +61,29 @@ fs.readFile('./cookie.json', function (err, data) {
       });
 });
 ```
+
+
+
+## API
+
+### senacApi.login(user, pass, unidade)
+
+Chamada de login ao portal do aluno. A api cria uma nova "janela" com o Nightmare, navega até o formulário de login do portal e preenche as credenciais. 
+
+Caso o login seja efetuado com sucesso, será retornado o cookie contendo o valor da sessão. Se o login for negado, retornada um erro.
+
+Parâmetros:
+* `user`: Usuário usado para acessar o portal
+* `pass`: Senha do usuário
+* `unidade`: Unidade do usuário 
+
+### senacApi.isLoggedIn(cookie)
+
+Verifica se a sessão ainda está ativa para o cookie passado. 
+
+Parâmetros:
+* `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+
 
 
 ## FAQ
