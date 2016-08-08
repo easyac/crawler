@@ -34,6 +34,7 @@ senacApi
 
 ### Ver Frequência
 Para retornar a frequência são nessesários alguns passos: 
+
 1. Buscar o código do Aluno
 2. Buscar os parâmetros disponíveis para o usuário
 3. A partir dos dados acima, consultar a frequência da turma.
