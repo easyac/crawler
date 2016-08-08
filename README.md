@@ -10,15 +10,16 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
 * [API](https://github.com/easyac/crawler#api)
     * [login](https://github.com/easyac/crawler#senacapiloginuser-pass-unidade)
     * [isLoggedIn](https://github.com/easyac/crawler#senacapiisloggedincookie)
-    * getSituacaoCurricular
-    * getTitulos
-    * getParamsFrequencia
-    * getFrequencia
+    * [getSituacaoCurricular]
+    * [getTitulos]
+    * [getParamsFrequencia]
+    * [getFrequencia]
 * [FAQ](https://github.com/easyac/crawler#faq)    
 
     
 ## Exemplos
  
+### Login
 Para efetuar o login, basta fazer a chamada ao login passando o usuário, senha e unidade. Caso o login seja efetuado com sucesso, será retornado o cookie contento o valor de sua sessão. É a partir dele que as próximas requisições serão feitas.
 ```javascript
 senacApi
@@ -29,6 +30,7 @@ senacApi
     .catch((err) => console.log(err) );
 ```
 
+### Ver Frequência
 Para retornar a frequência são nessesários alguns passos: 
 1. Deve-se buscar os parâmetros disponíveis para o usuário
 2. A partir deles consultar a frequência da turma.
@@ -73,6 +75,7 @@ Chamada de login ao portal do aluno. A api cria uma nova "janela" com o Nightmar
 Caso o login seja efetuado com sucesso, será retornado o cookie contendo o valor da sessão. Se o login for negado, retornada um erro.
 
 Parâmetros:
+
 * `user`: Usuário usado para acessar o portal
 * `pass`: Senha do usuário
 * `unidade`: Unidade do usuário 
@@ -82,7 +85,18 @@ Parâmetros:
 Verifica se a sessão ainda está ativa para o cookie passado. 
 
 Parâmetros:
+
 * `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+
+### senacApi.getSituacaoCurricular(cookie, codAluno, codTurma)
+
+Retorna o histórico de disciplinas. É possível visualizar as disciplinas aprovadas, cursando e reprovadas(ou que não compareceu).
+ 
+Parâmetros: 
+
+* `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+* `codAluno`: @TODO
+* `codTurma`: @TODO 
 
 
 
