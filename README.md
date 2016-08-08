@@ -10,6 +10,7 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
 * [API](https://github.com/easyac/crawler#api)
     * [login](https://github.com/easyac/crawler#senacapiloginuser-pass-unidade)
     * [isLoggedIn](https://github.com/easyac/crawler#senacapiisloggedincookie)
+    * [getParamsSituacaoCurricular]
     * [getSituacaoCurricular]
     * [getTitulos]
     * [getParamsFrequencia]
@@ -64,11 +65,9 @@ fs.readFile('./cookie.json', function (err, data) {
 });
 ```
 
-
-
 ## API
 
-### senacApi.login(user, pass, unidade)
+### login(user, pass, unidade)
 
 Chamada de login ao portal do aluno. A api cria uma nova "janela" com o Nightmare, navega até o formulário de login do portal e preenche as credenciais. 
 
@@ -80,7 +79,7 @@ Parâmetros:
 * `pass`: Senha do usuário
 * `unidade`: Unidade do usuário 
 
-### senacApi.isLoggedIn(cookie)
+### isLoggedIn(cookie)
 
 Verifica se a sessão ainda está ativa para o cookie passado. 
 
@@ -88,15 +87,25 @@ Parâmetros:
 
 * `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
 
-### senacApi.getSituacaoCurricular(cookie, codAluno, codTurma)
+### getParamsSituacaoCurricular(cookie, codAluno)
+
+Navega até a página de situação curricular e retorna os dados necessários para o método [getSituacaoCurricular](#getSituacaoCurricular).
+
+Parâmetros: 
+
+* `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+* `codAluno`: Código do Aluno
+
+
+### getSituacaoCurricular(cookie, codAluno, codTurma)
 
 Retorna o histórico de disciplinas. É possível visualizar as disciplinas aprovadas, cursando e reprovadas(ou que não compareceu).
  
 Parâmetros: 
 
 * `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
-* `codAluno`: @TODO
-* `codTurma`: @TODO 
+* `codAluno`: Valor retornado em [getCodigoAluno]()
+* `codTurma`: Valor retornado em [getParamsSituacaoCurricular]
 
 
 
