@@ -1,4 +1,88 @@
+# Easyac/crawlers
 
+Crawlers usados para buscar dados do portal do aluno.
+
+Dentro de suas funcionalidades estão **Login** e **Consultar Frequencia**, por exemplo.
+
+Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segmentio/nightmare) como navegação inicial e [Cheerio](https://github.com/cheeriojs/cheerio) para as demais requisições.
+
+* Exemplos
+* API
+    * login
+    * isLoggedIn
+    * getSituacaoCurricular
+    * getTitulos
+    * getParamsFrequencia
+    * getFrequencia
+    
+    
+
+
+## API
+
+### senacApi.login(user, pass, unidade)
+
+Chamada de login ao portal do aluno. A api cria uma nova "janela" com o Nightmare, navega até o formulário de login do portal e preenche as credenciais. 
+
+Caso o login seja efetuado com sucesso, será retornado o cookie contendo o valor da sessão. Se o login for negado, retornada um erro.
+
+Parâmetros:
+* `user`: Usuário usado para acessar o portal
+* `pass`: Senha do usuário
+* `unidade`: Unidade do usuário 
+
+### senacApi.isLoggedIn(cookie)
+
+Verifica se a sessão ainda está ativa para o cookie passado. 
+
+Parâmetros:
+* `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+
+
+## Exemplos
+ 
+Para efetuar o login, basta fazer a chamada ao login passando o usuário, senha e unidade. Caso o login seja efetuado com sucesso, será retornado o cookie contento o valor de sua sessão. É a partir dele que as próximas requisições serão feitas.
+```javascript
+senacApi
+    .login(user, password, unidade)
+    .then((cookie) => {
+        fs.writeFile('./cookie.json', JSON.stringify(cookie));
+    })
+    .catch((err) => console.log(err) );
+```
+
+Para retornar a frequência são nessesários alguns passos: 
+1. Deve-se buscar os parâmetros disponíveis para o usuário
+2. A partir deles consultar a frequência da turma.
+
+No exemplo abaixo lemos o cookie já salvo e buscamos a frequência do primeiro semestre de 2016.
+```javascript
+fs.readFile('./cookie.json', function (err, data) {
+    let cookie = JSON.parse(data.toString());
+    let codigoAluno = 1070153;
+
+    senacApi.isLoogedIn(cookie.value)
+      .then(function (data) {
+        return senacApi.getParamsFrequencia(cookie.value, codigoAluno);
+      })
+      .then(function (data) {
+        let periodo = '2016|1';
+
+        let turma = data.modulos
+          .filter((el, i) => el.periodo == periodo)
+          .map((el, i) => el.turma)
+          .reduce((prev, el) => el);
+
+        return senacApi.getFrequencia(cookie.value, codigoAluno, turma);
+      })
+      .then(function(situacaoCurricular){
+        console.log(JSON.stringify(situacaoCurricular));
+      })
+      .catch(function(err){
+        console.log(err);
+      });
+});
+```
 
 
 ## FAQ
