@@ -10,11 +10,12 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
 * [API](https://github.com/easyac/crawler#api)
     * [login](https://github.com/easyac/crawler#senacapiloginuser-pass-unidade)
     * [isLoggedIn](https://github.com/easyac/crawler#senacapiisloggedincookie)
-    * [getParamsSituacaoCurricular]
-    * [getSituacaoCurricular]
-    * [getTitulos]
-    * [getParamsFrequencia]
-    * [getFrequencia]
+    * [getCodigoAluno](#)
+    * [getParamsSituacaoCurricular](https://github.com/easyac/crawler#getparamssituacaocurricularcookie-codaluno)
+    * [getSituacaoCurricular](https://github.com/easyac/crawler#getsituacaocurricularcookie-codaluno-codturma)
+    * [getTitulos](#)
+    * [getParamsFrequencia](#)
+    * [getFrequencia](#)
 * [FAQ](https://github.com/easyac/crawler#faq)    
 
     
@@ -33,35 +34,34 @@ senacApi
 
 ### Ver Frequência
 Para retornar a frequência são nessesários alguns passos: 
-1. Deve-se buscar os parâmetros disponíveis para o usuário
-2. A partir deles consultar a frequência da turma.
+1. Buscar o código do Aluno
+2. Buscar os parâmetros disponíveis para o usuário
+3. A partir dos dados acima, consultar a frequência da turma.
 
 No exemplo abaixo lemos o cookie já salvo e buscamos a frequência do primeiro semestre de 2016.
 ```javascript
 fs.readFile('./cookie.json', function (err, data) {
-    let cookie = JSON.parse(data.toString());
-    let codigoAluno = 1070153;
+  const cookieJson = JSON.parse(data.toString());
+  const cookie = cookieJson.value;
+  senacApi
+    .getCodigoAluno(cookie)
+    .then((codAluno) => {
 
-    senacApi.isLoogedIn(cookie.value)
-      .then(function (data) {
-        return senacApi.getParamsFrequencia(cookie.value, codigoAluno);
-      })
-      .then(function (data) {
-        let periodo = '2016|1';
+      senacApi
+        .getParamsFrequencia(cookie, codAluno)
+        .then((data) => {
+          let periodo = '2016|1';
+          let turma = data.modulos
+            .filter((el, i) => el.periodo == periodo)
+            .map((el, i) => el.turma)
+            .reduce((prev, el) => el);
 
-        let turma = data.modulos
-          .filter((el, i) => el.periodo == periodo)
-          .map((el, i) => el.turma)
-          .reduce((prev, el) => el);
+          return senacApi.getFrequencia(cookie, codAluno, turma);
+        })
+        .then((data) => console.log(data));
 
-        return senacApi.getFrequencia(cookie.value, codigoAluno, turma);
-      })
-      .then(function(situacaoCurricular){
-        console.log(JSON.stringify(situacaoCurricular));
-      })
-      .catch(function(err){
-        console.log(err);
-      });
+    })
+    .catch((err) => console.log(err));
 });
 ```
 
@@ -86,6 +86,15 @@ Verifica se a sessão ainda está ativa para o cookie passado.
 Parâmetros:
 
 * `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+
+### getCodigoAluno(cookie)
+
+Retorna o código do aluno, esse código é mutável a cada semestre.
+
+Parâmetros:
+
+* `cookie`: Valor para `PHPSESSID`, ou cookie.value retornado do login
+
 
 ### getParamsSituacaoCurricular(cookie, codAluno)
 
