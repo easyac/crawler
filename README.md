@@ -23,13 +23,13 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
 
 Instale
 
-```shell
+```bash
 npm install easyac-crawler
 ```
 
 Use
 
-```
+```javascript
 const senacApi = require('easyac-crawler');
 ```
  
