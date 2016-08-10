@@ -6,7 +6,7 @@ Dentro de suas funcionalidades estão **Login** e **Consultar Frequencia**, por 
 
 Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segmentio/nightmare) como navegação inicial e [Cheerio](https://github.com/cheeriojs/cheerio) para as demais requisições.
 
-* [Instalação](#)
+* [Instalação](https://github.com/easyac/crawler#instalação)
 * [Exemplos](https://github.com/easyac/crawler#exemplos)
 * [API](https://github.com/easyac/crawler#api)
     * [login](https://github.com/easyac/crawler#senacapiloginuser-pass-unidade)
@@ -17,7 +17,7 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
     * [getTitulos](https://github.com/easyac/crawler#gettituloscookie)
     * [getParamsFrequencia](https://github.com/easyac/crawler#getparamsfrequenciacookie-codigoaluno)
     * [getFrequencia](https://github.com/easyac/crawler#getfrequenciacookie-codigoaluno-codigoturma)
-* [Testar](#)
+* [Testar](https://github.com/easyac/crawler#testar)
 * [FAQ](https://github.com/easyac/crawler#faq)    
 
 ## Instalação
