@@ -1,4 +1,4 @@
-# Crawler Easyac
+# easyac-crawler
 
 Nesse repositório estão os crawlers usados para buscar dados do portal do aluno.
 
@@ -17,6 +17,7 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
     * [getTitulos](https://github.com/easyac/crawler#gettituloscookie)
     * [getParamsFrequencia](https://github.com/easyac/crawler#getparamsfrequenciacookie-codigoaluno)
     * [getFrequencia](https://github.com/easyac/crawler#getfrequenciacookie-codigoaluno-codigoturma)
+* [Testar](#)
 * [FAQ](https://github.com/easyac/crawler#faq)    
 
 ## Instalação
@@ -162,7 +163,15 @@ Parâmetros:
 * `codTurma`: Valor retornado em [getParamsSituacaoCurricular](https://github.com/easyac/crawler#getparamssituacaocurricularcookie-codaluno)
 
 
+## Testar
 
+Basta clonar o projeto, instalar as dependências e rodar os testes
+```
+git clone git@github.com:easyac/crawler.git
+cd crawler
+npm install 
+npm test
+```
 
 ## FAQ
 
