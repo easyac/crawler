@@ -1,4 +1,6 @@
-# Crawler Easyac
+# easyac-crawler
+
+[![Build Status](https://travis-ci.org/easyac/crawler.svg?branch=master)](https://travis-ci.org/easyac/crawler)
 
 Nesse repositório estão os crawlers usados para buscar dados do portal do aluno.
 
@@ -6,7 +8,7 @@ Dentro de suas funcionalidades estão **Login** e **Consultar Frequencia**, por 
 
 Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segmentio/nightmare) como navegação inicial e [Cheerio](https://github.com/cheeriojs/cheerio) para as demais requisições.
 
-* [Instalação](#)
+* [Instalação](https://github.com/easyac/crawler#instalação)
 * [Exemplos](https://github.com/easyac/crawler#exemplos)
 * [API](https://github.com/easyac/crawler#api)
     * [login](https://github.com/easyac/crawler#senacapiloginuser-pass-unidade)
@@ -17,19 +19,20 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
     * [getTitulos](https://github.com/easyac/crawler#gettituloscookie)
     * [getParamsFrequencia](https://github.com/easyac/crawler#getparamsfrequenciacookie-codigoaluno)
     * [getFrequencia](https://github.com/easyac/crawler#getfrequenciacookie-codigoaluno-codigoturma)
+* [Testar](https://github.com/easyac/crawler#testar)
 * [FAQ](https://github.com/easyac/crawler#faq)    
 
 ## Instalação
 
 Instale
 
-```shell
+```bash
 npm install easyac-crawler
 ```
 
 Use
 
-```
+```javascript
 const senacApi = require('easyac-crawler');
 ```
  
@@ -162,7 +165,15 @@ Parâmetros:
 * `codTurma`: Valor retornado em [getParamsSituacaoCurricular](https://github.com/easyac/crawler#getparamssituacaocurricularcookie-codaluno)
 
 
+## Testar
 
+Basta clonar o projeto, instalar as dependências e rodar os testes
+```
+git clone git@github.com:easyac/crawler.git
+cd crawler
+npm install 
+npm test
+```
 
 ## FAQ
 

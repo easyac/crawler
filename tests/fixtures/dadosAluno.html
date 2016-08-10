@@ -1,0 +1,115 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8; IE=7; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="http://apsweb.senacrs.com.br/favicon.ico" type="image/x-icon" rel="icon">
+<link href="http://apsweb.senacrs.com.br/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<title>P�gina principal - Portal Acad�mico SENAC</title>
+<link href="http://apsweb.senacrs.com.br/resource/extjs/css/ext-all.css" rel="stylesheet" type="text/css">
+<link href="http://apsweb.senacrs.com.br/resource/extjs/css/ext-overrides.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="http://apsweb.senacrs.com.br/lib/system/js/extjs4/resources/css/ext-sandbox.css">
+<link href="http://apsweb.senacrs.com.br/resource/padrao_gvcollege.css" rel="stylesheet" type="text/css">
+<link href="http://apsweb.senacrs.com.br/themes/default.blue//theme-default.css" rel="stylesheet" type="text/css">
+<link href="http://apsweb.senacrs.com.br/themes/default.blue//css/theme-extjs.css" rel="stylesheet" type="text/css">
+<link href="http://apsweb.senacrs.com.br/resource/extjs/css/ux/passwordfield/Ext.ux.PasswordField.css" rel="stylesheet" type="text/css">
+<link href="http://apsweb.senacrs.com.br/themes/default.blue/aluno.css" rel="stylesheet" type="text/css">
+<link href="http://apsweb.senacrs.com.br/themes/default.blue/panelCentralPortalAluno.css" rel="stylesheet" type="text/css">
+<link href="http://apsweb.senacrs.com.br/lib/components/app/entities/Mensagens/css/mensagens.css" rel="stylesheet" type="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=10; IE=9;">
+<script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/shared/js/gvBrowserDetect.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/shared/js/gvCheckNavHomologados.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/shared/js/gvValidarDocumentos.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/validar.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs/adapter/ext/ext-base.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs/ext-all.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs/source/locale/ext-lang-pt_BR.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs/ext-overrides.js"></script><script type="text/javascript" language="javascript">
+            Ext.BLANK_IMAGE_URL = 'http://apsweb.senacrs.com.br/resource/extjs/images/default/s.gif'; 
+        </script><script type="text/javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs4/builds/ext-all-sandbox.js"></script><script type="text/javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs4/builds/ext-all-sandbox-override.js"></script><script type="text/javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs4/locale/ext-lang-sandbox-pt_BR.js"></script><script type="text/javascript" language="javascript">
+            var GVutils = {
+                version: '3.7.0.040',
+                basepath: 'http://apsweb.senacrs.com.br/',
+                themepath: 'http://apsweb.senacrs.com.br/themes/default.blue/',
+                imagepath: 'http://apsweb.senacrs.com.br/themes/default.blue/imagens/',
+                modulo: 'aluno'
+            }
+        </script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/shared/js/app/config.js"></script><script type="text/javascript" src="http://apsweb.senacrs.com.br/lib/system/js/jquery/jquery.min.js"></script><script type="text/javascript" src="http://apsweb.senacrs.com.br/lib/system/js/jquery/jquery.meio.mask.min.js"></script><script type="text/javascript" src="http://apsweb.senacrs.com.br/lib/components/core/js/jquery-ui.js"></script><link href="http://apsweb.senacrs.com.br/lib/components/core/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/common.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/lib.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs/ux/passwordfield/Ext.ux.PasswordField.js"></script><script type="text/javascript" language="javascript" src="views/Index/document.view.Index.js"></script><script type="text/javascript" language="javascript">
+			var paginaInicial='http://apsweb.senacrs.com.br/integrador.php5?t=28c02a5dd9bb952ea6e603adf7d111f8f8e31359&u=aHR0cDovL2Fwc3dlYi5zZW5hY3JzLmNvbS5ici9tb2R1bG9zL2FsdW5vL3BhZHJhb19TVVBFUklPUi5waHA=';
+			function init(){
+			    gvCheckNavHomologado.checkBrowserCompatible(gvBrowserDetect.browser, gvBrowserDetect.version, gvBrowserDetect.iEVersion);
+				Index.init({paginaInicial : 'http://apsweb.senacrs.com.br/integrador.php5?t=28c02a5dd9bb952ea6e603adf7d111f8f8e31359&u=aHR0cDovL2Fwc3dlYi5zZW5hY3JzLmNvbS5ici9tb2R1bG9zL2FsdW5vL3BhZHJhb19TVVBFUklPUi5waHA=',
+							primeiroAcesso: 'false'});
+			}
+		</script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs/ux/maskTextField/Ext.ux.InputTextMask.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs/ux/RowActions/Ext.ux.grid.RowActions.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/extjs/gvux/RecordListView/Ext.gvux.RecordListView.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/ajax.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/XMLIterator.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/XmlFormat.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/validar.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/mascara.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/XMLService.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/system/js/webtoolkit.base64.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/shared/js/gvWindowTrocaSenha.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/modulos/aluno/SelecaoEmpresaUnidade.js"></script><script type="text/javascript" language="javascript" src="http://apsweb.senacrs.com.br/lib/components/app/entities/Mensagens/js/genericoMensagens.js"></script><script type="text/javascript" language="javascript" src="core/js/menu.js"></script><script type="text/javascript" language="javascript">
+			function AlteraEstadoJanela(idJanela){
+			var janelaBody = 'janelaBody_'+idJanela;
+			el = Ext.get(janelaBody);
+			if(document.getElementById('imgJanela_'+idJanela).src.search('janela.btn.close.gif') != -1){
+			document.getElementById('imgJanela_'+idJanela).src = document.getElementById('imgJanela_'+idJanela).src.replace('janela.btn.close.gif','janela.btn.open.gif');
+			el.slideOut('t', {useDisplay: true, duration: 0.3} );
+			}else{
+			document.getElementById('imgJanela_'+idJanela).src = document.getElementById('imgJanela_'+idJanela).src.replace('janela.btn.open.gif','janela.btn.close.gif');
+			el.slideIn('t', {duration: 0.3});
+			}
+			return true;
+			}
+		</script>
+</head>
+<body onload="init();">
+<div id="cabecalho">
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+<td id="logoCabecalho" style="height: 60px">
+						�
+						Portal Aluno</td>
+<td id="meioCabecalho" style="height: 60px">�</td>
+<td id="logoSistema" style="height: 60px">ICARO MAINES HEIMIG<div class="iconesCabecalho">
+<a href="#" class="header-button-logout" title="Encerrar sess�o" onclick="Menu.StateManager.set('path_menu_aluno','/');window.location.assign('login.php5?postBack=1&amp;ViewLoginXmlXsl[method]=logout');">�</a><a href="#" class="header-button-about" title="Sobre o sistema" onclick="showAbout();">�</a><a href="#" class="header-button-passwd" title="Alterar minha senha" onclick="WindowTrocaSenha.show();">�</a><a href="#" class="header-button-update" title="Trocar Unidade" onclick="SelecaoEmpresaUnidade.show();">�</a><a href="#" class="header-button-home" title="P�gina principal" onclick="window.location.assign('index.php5');">�</a>
+</div>
+</td>
+</tr></table>
+<div class="ImagemSistema">�</div>
+</div>
+<div id="trocasenha-win" class="x-hidden"><div class="x-window-header">Troca de Senha</div></div>
+<div id="progresstrocasenha-win" class="x-hidden"><div class="x-window-header">Atualizando Senha</div></div>
+<div id="MsgSenhaMuitoFraca" style="display:none"><div>
+				Sua senha foi considerada muito fraca, por favor, informe outra. <br>
+				Tente n�o usar seu nome nem sua data de nascimento como senha.<br><div style="font-style:italic;margin-left:70px;">
+<span style="font-weight:bold;font-style:italic;">Exemplos:</span><br>
+					Senha Forte =  SeNh@FoRt%! <br>
+					Senha Fraca = 123 ou abcd  <br>
+</div>
+</div></div>
+<div id="MsgSenhaFraca" style="display:none"><div>
+				Sua senha foi considerada fraca, por favor, informe outra. <br>
+				Tente n�o usar seu nome nem sua data de nascimento como senha.<br><div style="font-style:italic;margin-left:70px;">
+<span style="font-weight:bold;font-style:italic;">Exemplos:</span><br>
+					Senha Forte =  SeNh@FoRt%! <br>
+					Senha Fraca = 123 ou abcd  <br>
+</div>
+<div style="margin-left:50px;">Deseja mesmo assim continuar?</div>
+</div></div>
+<script type="text/javascript" language="javascript">
+			WindowTrocaSenha.init();
+		</script><div id="selecao-empresa-unidade-blackout"></div>
+<div id="selecao-empresa-unidade">
+<b class="titulo">Trocar a empresa/unidade atual</b><div class="x-tool x-tool-close " id="ext-gen200">�</div>
+<div class="content-window"><table>
+<tr><td><select id="empresa-unidade-atual" style="         width:325px;         margin:0px;         height:25px;        "></select></td></tr>
+<tr><td>
+<button id="selecao-empresa-unidade-aplicar">Aplicar</button><button id="selecao-empresa-unidade-cancelar">Cancelar</button>
+</td></tr>
+</table></div>
+</div>
+<table id="bodystruct" width="100%"><tr>
+<td id="leftmenutd" valign="top">
+<div class="GVmenuHeader">Menu</div>
+<style type="text/css"></style>
+<div id="menuelement"></div>
+<script type="text/javascript" language="javascript">
+			Menu.MenuItens = Menu.addMenuItens([{"id":null,"nomeExibicao":"P\u00e1gina Principal","pagina":"index.php5","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"home.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Dados Cadastrais","pagina":"dadosCadastrais.php5?codigo=2087718","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"vcard.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Consulta Financeira","pagina":"consultaAreaFinanceira.php5","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bundle-16x16x8b.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"T\u00edtulos","pagina":"consultaTitulos.php5","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"empty.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Comprovante I.R.","pagina":"comprovanteIr.php5","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"receita.png","codigoPessoa":null,"subMenus":[]},{"id":"central-mensagem-aluno","nomeExibicao":"<span style=\"font-weight:bold;\">Central de Mensagens (1)<\/span>","pagina":"index.php5","target":"_self","status":2,"func":"","tipoLink":"link","icoName":"mail_16.png","codigoPessoa":2087718,"subMenus":[]},{"id":null,"nomeExibicao":"<span >Central de Avisos (0)<\/span>","pagina":"avisos.php5?c=2087718","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"flag_yellow.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Consulta Kits de Materiais","pagina":"consultaKitMateriais.php5?c=2087718","target":"_self","status":2,"func":"","tipoLink":"link","icoName":"folder.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Quita\u00e7\u00e3o Anual de D\u00e9bitos","pagina":"quitacaoAnualDebitos.php5?codigoPessoa=2087718","target":"_self","status":2,"func":"","tipoLink":"link","icoName":"document_ok_16.png","codigoPessoa":null,"subMenus":[]},{"id":"aluno","nomeExibicao":"ICARO HEIMIG","pagina":"","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"user.gif","codigoPessoa":null,"subMenus":[{"id":null,"nomeExibicao":"Dados Cadastrais","pagina":"dadosCadastrais.php5?codigo=2087718","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Matr\u00edculas Realizadas","pagina":"matriculasRealizadas.php5?codigoAluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"\u00c1rea Pedag\u00f3gica","pagina":"areaPedagogica.php5?codigoAluno=1070153","target":"_self","status":2,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Protocolo","pagina":"protocolo.php5?aluno=2087718&codigoAluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Boletim","pagina":"boletim.php5?aluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Compara\u00e7\u00e3o de Notas","pagina":"comparacaoNotas.php5?codigoAluno=1070153","target":"_self","status":2,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Consulta Frequ\u00eancia","pagina":"consultaFrequencia.php5?codigoAluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Situa\u00e7\u00e3o Curricular","pagina":"consultaHistorico.php5?codigoAluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Ativid. Complementares","pagina":"atividades.php5?codigoAluno=1070153","target":"_self","status":2,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Rematr\u00edcula","pagina":"","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"folder.png","codigoPessoa":null,"subMenus":[{"id":null,"nomeExibicao":"Processo de Rematr\u00edcula","pagina":"processomatricula.php5?codigoAluno=1070153","target":"_self","status":0,"func":"try{if(Page.podeDescarregaProcesso){Page.podeDescarregaProcesso = false}}catch(e){}","tipoLink":"link_func","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Comprovante","pagina":"comprovanteMatricula.php5?codigoAluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Op\u00e7\u00f5es de Rematr\u00edcula","pagina":"opcoesMatricula.php5?codigoAluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Reemiss\u00e3o de Contrato","pagina":"reemissaoContrato.php5?codigoAluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]}]},{"id":null,"nomeExibicao":"Turma","pagina":"paginaTurma.php5?codigo=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Agenda","pagina":"agendaAluno.php5?codigoAluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Central de Downloads","pagina":"centralDownloads.php5?codigoAluno=1070153","target":"_self","status":0,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"<span style=\"color:red\">Documentos Pendentes<\/span>","pagina":"documentosPendentes.php5?codigoAluno=1070153","target":"_self","status":2,"func":"","tipoLink":"link","icoName":"bullet_green.png","codigoPessoa":null,"subMenus":[],"usuario":{}}]},{"id":null,"nomeExibicao":"Links","pagina":"#","target":"_self","status":0,"func":null,"tipoLink":"link","icoName":"http:\/\/apsweb.senacrs.com.br\/resource\/icones\/world_link.png","codigoPessoa":null,"subMenus":[{"id":null,"nomeExibicao":"Avalia\u00e7\u00e3o institucional","pagina":"http:\/\/apsweb.senacrs.com.br\/integrador.php5?t=28c02a5dd9bb952ea6e603adf7d111f8f8e31359&u=aHR0cDovL2FpLnNlbmFjcnMuY29tLmJyL2FpL29ubGluZS9hY2NvdW50L3Nzby8=","target":"_blank","status":0,"func":null,"tipoLink":"link","icoName":"avaliacao.png","codigoPessoa":null,"subMenus":[]},{"id":null,"nomeExibicao":"Biblioteca","pagina":"http:\/\/apsweb.senacrs.com.br\/integrador.php5?t=28c02a5dd9bb952ea6e603adf7d111f8f8e31359&u=aHR0cDovL2JpYmxpb3RlY2Euc2VuYWNycy5jb20uYnIvcGVyZ2FtdW1fd2ViL2JpYmxpb3RlY2EvaW5kZXgucGhw","target":"_blank","status":0,"func":"","tipoLink":"link","icoName":"http:\/\/apsweb.senacrs.com.br\/resource\/icones\/world_link.png","codigoPessoa":null,"subMenus":[]}]}]);
+			Menu.init();
+		</script>
+</td>
+<td valign="top" id="bodyContent" style="margin-left:3px;" width="90%">
+<iframe frameborder="0" scrolling="auto" src="http://apsweb.senacrs.com.br/integrador.php5?t=28c02a5dd9bb952ea6e603adf7d111f8f8e31359&amp;u=aHR0cDovL2Fwc3dlYi5zZW5hY3JzLmNvbS5ici9tb2R1bG9zL2FsdW5vL3BhZHJhb19TVVBFUklPUi5waHA=" vspace="0" hspace="0" width="100%" height="100%" name="iframepaginainicial" id="iframepaginainicial" noresize></iframe><script type="text/javascript">
+						var _theframe = document.getElementById("iframepaginainicial");
+						_theframe.contentWindow.location.href = _theframe.src;
+					</script>
+</td>
+</tr></table>
+</body>
+</html>
