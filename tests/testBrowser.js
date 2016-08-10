@@ -68,4 +68,26 @@ describe('Browser', function() {
       assert.deepEqual(response, Browser.getFirstResponse(cookies));
     });
   });
+
+  describe('.login', function(){
+
+    it('should reject if not all parameters filled', function(done){
+      Browser
+        .login()
+        .catch((err) => {
+          assert.equal(err, 'All the parameters must be fullfilled');
+          done();
+        });
+    });
+
+    it('should reject if login fail', function(done){
+      this.timeout(0);
+      Browser
+        .login('1234', '1234', '1,63')
+        .catch((err) => {
+          assert.equal(err, 'Login failed');
+          done();
+        });
+    });
+  });
 });
