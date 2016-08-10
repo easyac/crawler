@@ -1,5 +1,7 @@
 # easyac-crawler
 
+[![Build Status](https://travis-ci.org/easyac/crawler.svg?branch=master)](https://travis-ci.org/easyac/crawler)
+
 Nesse repositório estão os crawlers usados para buscar dados do portal do aluno.
 
 Dentro de suas funcionalidades estão **Login** e **Consultar Frequencia**, por exemplo.
