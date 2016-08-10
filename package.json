@@ -1,17 +1,22 @@
 {
-  "name": "night",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cheerio": "^0.20.0",
-    "nightmare": "^2.6.1",
-    "request": "^2.72.0",
-    "vo": "^4.0.2"
-  }
+    "name": "easyac-crawler",
+    "version": "0.1.0",
+    "description": "Crawler to get the portal information",
+    "keywords": "senac senac-api senac-crawler easyac",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/easyac/crawler"
+    },
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Ícaro Heimig <icaro.mh@gmail.com> (https://icaromh.com)",
+    "license": "ISC",
+    "dependencies": {
+        "cheerio": "^0.20.0",
+        "nightmare": "^2.6.1",
+        "request": "^2.72.0",
+        "vo": "^4.0.2"
+    }
 }
