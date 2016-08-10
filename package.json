@@ -9,7 +9,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests"
+    "test": "mocha tests/**"
   },
   "author": "Ícaro Heimig <icaro.mh@gmail.com> (https://icaromh.com)",
   "license": "ISC",
