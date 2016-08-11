@@ -39,6 +39,29 @@ describe('Browser', function() {
     });
   });
 
+  describe('.fixUnidade', function() {
+    it('should add \'1,\' before unidade if passed a number', function() {
+      let unidade = Browser._fixUnidade(63);
+      assert.equal('1,63', unidade);
+    });
+
+    it('should add \'1,\' before unidade if passed a String', function() {
+      let unidade = Browser._fixUnidade('63');
+      assert.equal('1,63', unidade);
+    });
+
+    it('should return unidade as is', function() {
+      let unidade = Browser._fixUnidade('1,63');
+      assert.equal('1,63',unidade);
+    });
+
+    it('should return null', function() {
+      let unidade = Browser._fixUnidade();
+      assert.equal(null,unidade);
+    });
+  });
+
+
   describe('.getFirstResponse', function() {
     it('should return the only cookie with name equals PHPSESSID', function() {
       let cookies = [
@@ -83,7 +106,7 @@ describe('Browser', function() {
     it('should reject if login fail', function(done){
       this.timeout(0);
       Browser
-        .login('1234', '1234', '1,63')
+        .login('1234', '1234', 63)
         .catch((err) => {
           assert.equal(err, 'Login failed');
           done();
