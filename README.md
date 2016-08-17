@@ -11,7 +11,7 @@ Foi desenvolvido principalmente utilizando [Nightmarejs](https://github.com/segm
 * [Instalação](https://github.com/easyac/crawler#instalação)
 * [Exemplos](https://github.com/easyac/crawler#exemplos)
 * [API](https://github.com/easyac/crawler#api)
-    * [login](https://github.com/easyac/crawler#senacapiloginuser-pass-unidade)
+    * [login](https://github.com/easyac/crawler#loginuser-pass-unidade)
     * [isLoggedIn](https://github.com/easyac/crawler#isloggedincookie)
     * [getCodigoAluno](https://github.com/easyac/crawler#getcodigoalunocookie)
     * [getParamsSituacaoCurricular](https://github.com/easyac/crawler#getparamssituacaocurricularcookie-codaluno)
@@ -45,7 +45,7 @@ Para efetuar o login, basta fazer a chamada ao login passando o usuário, senha 
 senacApi
     .login(user, password, unidade)
     .then((cookie) => {
-        fs.writeFile('./cookie.json', JSON.stringify(cookie));
+        fs.writeFile('./cookie.txt', cookie);
     })
     .catch((err) => console.log(err) );
 ```
@@ -59,13 +59,11 @@ Para retornar a frequência são nessesários alguns passos:
 
 No exemplo abaixo lemos o cookie já salvo e buscamos a frequência do primeiro semestre de 2016.
 ```javascript
-fs.readFile('./cookie.json', function (err, data) {
-  const cookieJson = JSON.parse(data.toString());
-  const cookie = cookieJson.value;
+fs.readFile('./cookie.txt', function (err, data) {
+  const cookie = data.toString();
   senacApi
     .getCodigoAluno(cookie)
     .then((codAluno) => {
-
       senacApi
         .getParamsFrequencia(cookie, codAluno)
         .then((data) => {
@@ -74,11 +72,9 @@ fs.readFile('./cookie.json', function (err, data) {
             .filter((el, i) => el.periodo == periodo)
             .map((el, i) => el.turma)
             .reduce((prev, el) => el);
-
           return senacApi.getFrequencia(cookie, codAluno, turma);
         })
         .then((data) => console.log(data));
-
     })
     .catch((err) => console.log(err));
 });
@@ -97,6 +93,11 @@ Parâmetros:
 * `user`: Usuário usado para acessar o portal
 * `pass`: Senha do usuário
 * `unidade`: Unidade do usuário 
+
+Retorno:
+
+* **Promise.resolved**: String do cookie
+* **Promise.rejected**: String "Login failed"
 
 ### isLoggedIn(cookie)
 
