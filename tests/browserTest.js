@@ -1,3 +1,4 @@
+/* globals describe, it */
 'use strict';
 
 var assert    = require('assert');
@@ -9,8 +10,8 @@ describe('Browser', function() {
     it('should return cookie.value for PHPSESSID', function() {
       let cookies = [
         {
-          name: "teste",
-          value: "teste"
+          name: 'teste',
+          value: 'teste'
         },
         {
           name: 'PHPSESSID',
@@ -30,8 +31,8 @@ describe('Browser', function() {
     it('should return false if doen\'t have cookie PHPSESSID', function() {
       let cookies = [
         {
-          name: "teste",
-          value: "teste"
+          name: 'teste',
+          value: 'teste'
         }
       ];
 

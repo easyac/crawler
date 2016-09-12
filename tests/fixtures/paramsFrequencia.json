@@ -1,191 +1,193 @@
 {
-    "cursos": [
-        {
-            "codigo": "55",
-            "descricao": "SEM ÁREA",
-            "cicloOuDisciplina": "D"
-        },
-        {
-            "codigo": "365",
-            "descricao": "Tecnol Anál.Desenv.Sist.FatPoa",
-            "cicloOuDisciplina": "D"
-        }
-    ],
-    "ciclos": [
-        {
-            "codigo": "186",
-            "curso": "55",
-            "descricao": "1"
-        },
-        {
-            "codigo": "528",
-            "curso": "365",
-            "descricao": "3º Semestre"
-        },
-        {
-            "codigo": "529",
-            "curso": "365",
-            "descricao": "4º Semestre"
-        },
-        {
-            "codigo": "530",
-            "curso": "365",
-            "descricao": "5º Semestre"
-        },
-        {
-            "codigo": "531",
-            "curso": "365",
-            "descricao": "6º Semestre"
-        }
-    ],
-    "periodos": [
-        {
-            "ano": "2014",
-            "semestre": "0",
-            "value": "2014|0",
-            "text": "2014/Anual"
-        },
-        {
-            "ano": "2014",
-            "semestre": "2",
-            "value": "2014|2",
-            "text": "2014/2"
-        },
-        {
-            "ano": "2015",
-            "semestre": "1",
-            "value": "2015|1",
-            "text": "2015/1"
-        },
-        {
-            "ano": "2015",
-            "semestre": "2",
-            "value": "2015|2",
-            "text": "2015/2"
-        },
-        {
-            "ano": "2016",
-            "semestre": "1",
-            "value": "2016|1",
-            "text": "2016/1"
-        },
-        {
-            "ano": "2016",
-            "semestre": "2",
-            "value": "2016|2",
-            "text": "2016/2"
-        }
-    ],
-    "turmas": [
-        {
-            "codigo": "2603311",
-            "curso": "365",
-            "ciclo": "528",
-            "periodo": "2014|2",
-            "anoCorrente": "2016",
-            "semestreCorrente": "2",
-            "descricao": "ADS3N14/2A (FACULDADE POA) ",
-            "horasAulaOuDiaLetivo": "H"
-        },
-        {
-            "codigo": "2815086",
-            "curso": "55",
-            "ciclo": "186",
-            "periodo": "2014|0",
-            "anoCorrente": "2016",
-            "semestreCorrente": "2",
-            "descricao": "630005800  (FACULDADE POA) ",
-            "horasAulaOuDiaLetivo": "H"
-        },
-        {
-            "codigo": "2839852",
-            "curso": "365",
-            "ciclo": "529",
-            "periodo": "2015|1",
-            "anoCorrente": "2016",
-            "semestreCorrente": "2",
-            "descricao": "ADS4N15/1A (FACULDADE POA) ",
-            "horasAulaOuDiaLetivo": "H"
-        },
-        {
-            "codigo": "3024861",
-            "curso": "365",
-            "ciclo": "530",
-            "periodo": "2015|2",
-            "anoCorrente": "2016",
-            "semestreCorrente": "2",
-            "descricao": "ADS5N15/2A (FACULDADE POA) ",
-            "horasAulaOuDiaLetivo": "H"
-        },
-        {
-            "codigo": "3162505",
-            "curso": "365",
-            "ciclo": "531",
-            "periodo": "2016|1",
-            "anoCorrente": "2016",
-            "semestreCorrente": "2",
-            "descricao": "ADS6N16/1A (FACULDADE POA) ",
-            "horasAulaOuDiaLetivo": "H"
-        },
-        {
-            "codigo": "3296378",
-            "curso": "365",
-            "ciclo": "531",
-            "periodo": "2016|2",
-            "anoCorrente": "2016",
-            "semestreCorrente": "2",
-            "descricao": "ADS6N16/2A (FACULDADE POA) ",
-            "horasAulaOuDiaLetivo": "H"
-        }
-    ],
-    "modulos": [
-        {
-            "numero": "1",
-            "curso": "55",
-            "ciclo": "186",
-            "periodo": "2014|0",
-            "turma": "2815086",
-            "nome": "1º Conceito"
-        },
-        {
-            "numero": "1",
-            "curso": "365",
-            "ciclo": "528",
-            "periodo": "2014|2",
-            "turma": "2603311",
-            "nome": "1º Conceito"
-        },
-        {
-            "numero": "1",
-            "curso": "365",
-            "ciclo": "529",
-            "periodo": "2015|1",
-            "turma": "2839852",
-            "nome": "1º Conceito"
-        },
-        {
-            "numero": "1",
-            "curso": "365",
-            "ciclo": "530",
-            "periodo": "2015|2",
-            "turma": "3024861",
-            "nome": "1º Conceito"
-        },
-        {
-            "numero": "1",
-            "curso": "365",
-            "ciclo": "531",
-            "periodo": "2016|1",
-            "turma": "3162505",
-            "nome": "1º Conceito"
-        },
-        {
-            "numero": "1",
-            "curso": "365",
-            "ciclo": "531",
-            "periodo": "2016|2",
-            "turma": "3296378",
-            "nome": "1º Conceito"
-        }
-    ]
+    "consultaFrequencia": {
+        "cursos": [
+            {
+                "codigo": "55",
+                "descricao": "SEM ÁREA",
+                "cicloOuDisciplina": "D"
+            },
+            {
+                "codigo": "365",
+                "descricao": "Tecnol Anál.Desenv.Sist.FatPoa",
+                "cicloOuDisciplina": "D"
+            }
+        ],
+        "ciclos": [
+            {
+                "codigo": "186",
+                "curso": "55",
+                "descricao": "1"
+            },
+            {
+                "codigo": "528",
+                "curso": "365",
+                "descricao": "3º Semestre"
+            },
+            {
+                "codigo": "529",
+                "curso": "365",
+                "descricao": "4º Semestre"
+            },
+            {
+                "codigo": "530",
+                "curso": "365",
+                "descricao": "5º Semestre"
+            },
+            {
+                "codigo": "531",
+                "curso": "365",
+                "descricao": "6º Semestre"
+            }
+        ],
+        "periodos": [
+            {
+                "ano": "2014",
+                "semestre": "0",
+                "value": "2014|0",
+                "text": "2014/Anual"
+            },
+            {
+                "ano": "2014",
+                "semestre": "2",
+                "value": "2014|2",
+                "text": "2014/2"
+            },
+            {
+                "ano": "2015",
+                "semestre": "1",
+                "value": "2015|1",
+                "text": "2015/1"
+            },
+            {
+                "ano": "2015",
+                "semestre": "2",
+                "value": "2015|2",
+                "text": "2015/2"
+            },
+            {
+                "ano": "2016",
+                "semestre": "1",
+                "value": "2016|1",
+                "text": "2016/1"
+            },
+            {
+                "ano": "2016",
+                "semestre": "2",
+                "value": "2016|2",
+                "text": "2016/2"
+            }
+        ],
+        "turmas": [
+            {
+                "codigo": "2603311",
+                "curso": "365",
+                "ciclo": "528",
+                "periodo": "2014|2",
+                "anoCorrente": "2016",
+                "semestreCorrente": "2",
+                "descricao": "ADS3N14/2A (FACULDADE POA) ",
+                "horasAulaOuDiaLetivo": "H"
+            },
+            {
+                "codigo": "2815086",
+                "curso": "55",
+                "ciclo": "186",
+                "periodo": "2014|0",
+                "anoCorrente": "2016",
+                "semestreCorrente": "2",
+                "descricao": "630005800  (FACULDADE POA) ",
+                "horasAulaOuDiaLetivo": "H"
+            },
+            {
+                "codigo": "2839852",
+                "curso": "365",
+                "ciclo": "529",
+                "periodo": "2015|1",
+                "anoCorrente": "2016",
+                "semestreCorrente": "2",
+                "descricao": "ADS4N15/1A (FACULDADE POA) ",
+                "horasAulaOuDiaLetivo": "H"
+            },
+            {
+                "codigo": "3024861",
+                "curso": "365",
+                "ciclo": "530",
+                "periodo": "2015|2",
+                "anoCorrente": "2016",
+                "semestreCorrente": "2",
+                "descricao": "ADS5N15/2A (FACULDADE POA) ",
+                "horasAulaOuDiaLetivo": "H"
+            },
+            {
+                "codigo": "3162505",
+                "curso": "365",
+                "ciclo": "531",
+                "periodo": "2016|1",
+                "anoCorrente": "2016",
+                "semestreCorrente": "2",
+                "descricao": "ADS6N16/1A (FACULDADE POA) ",
+                "horasAulaOuDiaLetivo": "H"
+            },
+            {
+                "codigo": "3296378",
+                "curso": "365",
+                "ciclo": "531",
+                "periodo": "2016|2",
+                "anoCorrente": "2016",
+                "semestreCorrente": "2",
+                "descricao": "ADS6N16/2A (FACULDADE POA) ",
+                "horasAulaOuDiaLetivo": "H"
+            }
+        ],
+        "modulos": [
+            {
+                "numero": "1",
+                "curso": "55",
+                "ciclo": "186",
+                "periodo": "2014|0",
+                "turma": "2815086",
+                "nome": "1º Conceito"
+            },
+            {
+                "numero": "1",
+                "curso": "365",
+                "ciclo": "528",
+                "periodo": "2014|2",
+                "turma": "2603311",
+                "nome": "1º Conceito"
+            },
+            {
+                "numero": "1",
+                "curso": "365",
+                "ciclo": "529",
+                "periodo": "2015|1",
+                "turma": "2839852",
+                "nome": "1º Conceito"
+            },
+            {
+                "numero": "1",
+                "curso": "365",
+                "ciclo": "530",
+                "periodo": "2015|2",
+                "turma": "3024861",
+                "nome": "1º Conceito"
+            },
+            {
+                "numero": "1",
+                "curso": "365",
+                "ciclo": "531",
+                "periodo": "2016|1",
+                "turma": "3162505",
+                "nome": "1º Conceito"
+            },
+            {
+                "numero": "1",
+                "curso": "365",
+                "ciclo": "531",
+                "periodo": "2016|2",
+                "turma": "3296378",
+                "nome": "1º Conceito"
+            }
+        ]
+    }
 }

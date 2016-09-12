@@ -1,3 +1,4 @@
+/* globals describe, it */
 'use strict';
 
 var assert    = require('assert');
@@ -14,11 +15,13 @@ describe('Parser.consultaFrequencia', function() {
       let params = Parser.consultaFrequencia.parseParams(html);
 
       let expected = {
-        cursos: false,
-        ciclos: false,
-        periodos: false,
-        turmas: false,
-        modulos: false,
+        consultaFrequencia: {
+          cursos: false,
+          ciclos: false,
+          periodos: false,
+          turmas: false,
+          modulos: false
+        }
       };
 
       assert.deepEqual(expected, params);
