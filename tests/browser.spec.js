@@ -122,6 +122,7 @@ describe('Browser', function() {
   describe('.getNotas', function(){
 
     it('should call url ', function(done){
+      this.timeout(0);
       Browser
         .getNotas('asdiuasoid', 12898)
         .then((value) => {
