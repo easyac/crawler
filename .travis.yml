@@ -2,8 +2,10 @@ language: node_js
 node_js:
     - "6"
 sudo: false
+compiler:
+  - clang
+  - gcc
 install:
-    - apt-get install g++
     - npm install -g mocha
     - npm install
     - export DISPLAY=':99.0'
