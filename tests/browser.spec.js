@@ -118,4 +118,26 @@ describe('Browser', function() {
         });
     });
   });
+
+  describe('.getNotas', function(){
+
+    it('should call url ', function(done){
+      Browser
+        .getNotas('asdiuasoid', 12898)
+        .then((value) => {
+          assert.equal(value, true);
+          done();
+        });
+    });
+
+    it('should not call url ', function(done){
+      Browser
+        .getNotas()
+        .catch((value) => {
+          assert.equal(value, 'Params missing');
+          done();
+        });
+    });
+
+  });
 });
