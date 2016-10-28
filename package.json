@@ -23,6 +23,7 @@
     "vo": "^4.0.2"
   },
   "devDependencies": {
+    "istanbul-cobertura-badger": "^1.2.1",
     "mocha": "^3.0.2"
   }
 }

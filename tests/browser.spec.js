@@ -6,6 +6,11 @@ const Browser = require(__dirname + '/../lib/browser');
 
 
 describe('Browser', function() {
+
+  it('should not show the window frame ', function (){
+
+  })
+
   describe('.mapCookie', function() {
     it('should return cookie.value for PHPSESSID', function() {
       let cookies = [
@@ -62,7 +67,6 @@ describe('Browser', function() {
     });
   });
 
-
   describe('.getFirstResponse', function() {
     it('should return the only cookie with name equals PHPSESSID', function() {
       let cookies = [
@@ -104,7 +108,7 @@ describe('Browser', function() {
         });
     });
 
-    it('should reject if login fail', function(done){
+    xit('should reject if login fail', function(done){
       this.timeout(0);
       Browser
         .login('1234', '1234', 63)
