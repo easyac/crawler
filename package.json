@@ -1,6 +1,6 @@
 {
   "name": "easyac-crawler",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Crawler to get the portal information",
   "keywords": "senac, senac-api, senac-crawler, easyac",
   "repository": {
@@ -17,16 +17,17 @@
     "atob": "^2.0.3",
     "btoa": "^1.1.2",
     "cheerio": "^0.20.0",
+    "debug": "^2.6.4",
     "iconv": "^2.2.1",
     "nightmare": "^2.6.1",
     "request": "^2.72.0",
     "vo": "^4.0.2"
   },
   "devDependencies": {
-    "istanbul-cobertura-badger": "^1.2.1",
-    "mocha": "^3.0.2",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "istanbul-cobertura-badger": "^1.2.1",
+    "mocha": "^3.0.2"
   }
 }
